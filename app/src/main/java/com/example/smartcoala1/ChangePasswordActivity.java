@@ -81,7 +81,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 DynamicToast.makeSuccess(ChangePasswordActivity.this, "Password Updated Successfully", 10).show();
                                 firebaseAuth.signOut();
-                                startActivity(new Intent(ChangePasswordActivity.this, LoginActivity.class));
+                                startActivity(new Intent(ChangePasswordActivity.this, LoginActivity2.class));
                             } else {
                                 DynamicToast.makeError(ChangePasswordActivity.this, task.getException().getMessage(), 10).show();
                             }
