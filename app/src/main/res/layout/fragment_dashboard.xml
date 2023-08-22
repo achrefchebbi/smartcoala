@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor1"
+    tools:context=".DashboardFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Your other layout components before the NeumorphCardView -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_marginTop="50dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/backgroundColor1"
+                app:cardCornerRadius="18dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/strokecol"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:stretchColumns="0">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/mazzardlbolditalic"
+                                android:gravity="center"
+                                android:text="Electrical Ports"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColor"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:stretchColumns="0,1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginTop="50dp"
+                                app:cardElevation="6dp"
+                                app:cardBackgroundColor="@color/backgroundColor"
+                                app:cardCornerRadius="18dp"
+                                app:strokeWidth="2dp"
+                                app:strokeColor="@color/strokecol"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView1"
+                                        android:layout_width="64dp"
+                                        android:layout_height="64dp"
+                                        android:layout_marginTop="18dp"
+                                        android:src="@drawable/ic_chauffage"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mazzardhblackitalic"
+                                        android:gravity="center"
+                                        android:text="PORT 1"
+                                        android:textColor="@color/textColor"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <Switch
+                                        android:id="@+id/switch1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textOff="0"
+                                        android:textOn="1"
+                                        android:layout_gravity="center_vertical" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginTop="50dp"
+                                app:cardElevation="6dp"
+                                app:cardBackgroundColor="@color/backgroundColor"
+                                app:cardCornerRadius="18dp"
+                                app:strokeWidth="2dp"
+                                app:strokeColor="@color/strokecol"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="64dp"
+                                        android:layout_height="64dp"
+                                        android:layout_marginTop="18dp"
+                                        android:src="@drawable/ic_anti_m"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mazzardhblackitalic"
+                                        android:gravity="center"
+                                        android:text="PORT 2"
+                                        android:textColor="@color/textColor"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                    <Switch
+                                        android:id="@+id/switch2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textOff="0"
+                                        android:textOn="1"
+                                        android:layout_gravity="center_vertical" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginTop="50dp"
+                                app:cardElevation="6dp"
+                                app:cardBackgroundColor="@color/backgroundColor"
+                                app:cardCornerRadius="18dp"
+                                app:strokeWidth="2dp"
+                                app:strokeColor="@color/strokecol"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView3"
+                                        android:layout_width="64dp"
+                                        android:layout_height="64dp"
+                                        android:layout_marginTop="18dp"
+                                        android:src="@drawable/ic_climatiseur"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mazzardhblackitalic"
+                                        android:gravity="center"
+                                        android:text="PORT 3"
+                                        android:textColor="@color/textColor"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <Switch
+                                        android:id="@+id/switch3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textOff="0"
+                                        android:textOn="1"
+                                        android:layout_gravity="center_vertical" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginTop="50dp"
+                                app:cardElevation="6dp"
+                                app:cardBackgroundColor="@color/backgroundColor"
+                                app:cardCornerRadius="18dp"
+                                app:strokeWidth="2dp"
+                                app:strokeColor="@color/strokecol"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView4"
+                                        android:layout_width="64dp"
+                                        android:layout_height="64dp"
+                                        android:layout_marginTop="18dp"
+                                        android:src="@drawable/ic_ventilateur"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mazzardhblackitalic"
+                                        android:gravity="center"
+                                        android:text="PORT 4"
+                                        android:textColor="@color/textColor"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                    <Switch
+                                        android:id="@+id/switch4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textOff="0"
+                                        android:textOn="1"
+                                        android:layout_gravity="center_vertical" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Your other layout components after the NeumorphCardView -->
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "496094339708",
+    "project_id": "smartcoala1-5cfe7",
+    "storage_bucket": "smartcoala1-5cfe7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496094339708:android:e5b2c3ca03ae22a9ac1ff9",
+        "android_client_info": {
+          "package_name": "com.example.smartcoala1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496094339708-5g94ifd4im6nblqsarukp3s35ocenqhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmzWg8s6OltW_4Cv7cp_4IaYKmL_wzc9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496094339708-5g94ifd4im6nblqsarukp3s35ocenqhi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
