@@ -1,6 +1,6 @@
 # smartcoala
 
-SmartCoala: Remote Device Control Android Application
+#SmartCoala: Remote Device Control Android Application
 
 
 
