@@ -2,19 +2,23 @@ package com.example.smartcoala1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.smartcoala1.DashboardFragment;
-import com.example.smartcoala1.R;
+import com.example.smartcoala1.MainActivity;
 
+import java.util.List;
 import java.util.Locale;
 
-public class LayoutVoiceControlActivity extends AppCompatActivity {
+public class LayoutVoiceControlActivity extends AppCompatActivity implements RecognitionListener {
 
     private SpeechRecognizer speechRecognizer;
 
@@ -25,6 +29,7 @@ public class LayoutVoiceControlActivity extends AppCompatActivity {
 
         // Initialize SpeechRecognizer
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
+        speechRecognizer.setRecognitionListener(this); // Set the recognition listener
 
         ImageView Voice = findViewById(R.id.Voice);
         ImageView Manuel = findViewById(R.id.Manuel);
@@ -54,8 +59,68 @@ public class LayoutVoiceControlActivity extends AppCompatActivity {
         speechRecognizer.startListening(intent);
     }
 
+    private void processVoiceCommand(String command) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        DashboardFragment dashboardFragment = (DashboardFragment) fragmentManager.findFragmentById(R.id.dashboardContainer);
+
+        if (dashboardFragment != null) {
+            dashboardFragment.handleVoiceCommand(command);
+        }
+    }
+
     private void navigateToDashboard() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    // Implement the methods of RecognitionListener as shown before
+
+    @Override
+    public void onReadyForSpeech(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onBeginningOfSpeech() {
+
+    }
+
+    @Override
+    public void onRmsChanged(float v) {
+
+    }
+
+    @Override
+    public void onBufferReceived(byte[] bytes) {
+
+    }
+
+    @Override
+    public void onEndOfSpeech() {
+
+    }
+
+    @Override
+    public void onError(int i) {
+
+    }
+
+    @Override
+    public void onResults(Bundle results) {
+        List<String> matches = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+        if (matches != null && !matches.isEmpty()) {
+            String recognizedText = matches.get(0);
+            processVoiceCommand(recognizedText);
+        }
+    }
+
+    @Override
+    public void onPartialResults(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onEvent(int i, Bundle bundle) {
+
     }
 }

@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/slide_1"
     tools:context=".DashboardFragment">
-
+    <FrameLayout
+        android:id="@+id/dashboardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -283,4 +286,6 @@
 
 
     </RelativeLayout>
+    </FrameLayout>
+
 </ScrollView>

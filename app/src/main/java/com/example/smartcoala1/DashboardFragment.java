@@ -104,7 +104,47 @@ public class DashboardFragment extends Fragment {
 
         return view;
     }
+///////////////////////////////////////code//////////
 
+    // Method to handle recognized voice commands
+    public void handleVoiceCommand(String command) {
+        if (command.contains("port 1")) {
+            toggleSwitch(switch1, imageView1, cardView1, "port1");
+        } else if (command.contains("port 2")) {
+            toggleSwitch(switch2, imageView2, cardView2, "port2");
+        } else if (command.contains("port 3")) {
+            toggleSwitch(switch3, imageView3, cardView3, "port3");
+        } else if (command.contains("port 4")) {
+            toggleSwitch(switch4, imageView4, cardView4, "port4");
+        }
+    }
+
+    // Method to toggle the state of a switch and update UI
+    // Method to toggle the state of a switch and update UI and Firebase
+    private void toggleSwitch(Switch switchView, ImageView imageView, MaterialCardView cardView, String portName) {
+        boolean newState = !switchView.isChecked();
+        switchView.setChecked(newState);
+
+        // Update UI
+        if (newState) {
+            cardView.setCardBackgroundColor(Color.GREEN);
+        } else {
+            cardView.setCardBackgroundColor(Color.RED);
+        }
+
+        // Update Firebase database
+        String status = newState ? "1" : "0";
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+            databaseReference.child(uid).child("components").child(portName).setValue(status);
+        }
+    }
+////////////////////////////////////////////////////////code ////////////////////////
+
+
+    /////////////////////////////////
     // Method to set the state of the switch and image view based on Firebase value
     private void retrieveSwitchState(final String uid, final String portName, final Switch switchView, final ImageView imageView, final MaterialCardView cardView) {
         databaseReference.child(uid).child("components").child(portName).addValueEventListener(new ValueEventListener() {
