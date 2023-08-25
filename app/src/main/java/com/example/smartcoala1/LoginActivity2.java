@@ -104,7 +104,7 @@ public class LoginActivity2 extends AppCompatActivity {
 
                     if (user != null) {
                         DynamicToast.makeSuccess(LoginActivity2.this, "Login Successful!", 10).show();
-                        startActivity(new Intent(LoginActivity2.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity2.this, LayoutVoiceControlActivity.class));
                         finish();
                     }
                 } else {

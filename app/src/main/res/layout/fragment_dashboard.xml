@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor1"
+    android:background="@drawable/slide_1"
     tools:context=".DashboardFragment">
 
     <RelativeLayout
@@ -107,7 +107,7 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/mazzardhblackitalic"
                                         android:gravity="center"
-                                        android:text="PORT 1"
+                                        android:text="Chauffage"
                                         android:textColor="@color/textColor"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
@@ -148,14 +148,14 @@
                                         android:layout_width="64dp"
                                         android:layout_height="64dp"
                                         android:layout_marginTop="18dp"
-                                        android:src="@drawable/ic_anti_m"/>
+                                        android:src="@drawable/kilins"/>
 
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/mazzardhblackitalic"
                                         android:gravity="center"
-                                        android:text="PORT 2"
+                                        android:text="kill moustique "
                                         android:textColor="@color/textColor"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
@@ -207,7 +207,7 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/mazzardhblackitalic"
                                         android:gravity="center"
-                                        android:text="PORT 3"
+                                        android:text="Climatiseur"
                                         android:textColor="@color/textColor"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
@@ -255,7 +255,7 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/mazzardhblackitalic"
                                         android:gravity="center"
-                                        android:text="PORT 4"
+                                        android:text="Ventilateur"
                                         android:textColor="@color/textColor"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
