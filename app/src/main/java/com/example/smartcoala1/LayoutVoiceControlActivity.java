@@ -55,7 +55,7 @@ public class LayoutVoiceControlActivity extends AppCompatActivity {
     }
 
     private void navigateToDashboard() {
-        Intent intent = new Intent(this, DashboardFragment.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
