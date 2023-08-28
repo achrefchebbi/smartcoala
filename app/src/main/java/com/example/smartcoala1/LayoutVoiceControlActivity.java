@@ -21,6 +21,7 @@ import java.util.Locale;
 public class LayoutVoiceControlActivity extends AppCompatActivity implements RecognitionListener {
 
     private SpeechRecognizer speechRecognizer;
+    private static final int RECORD_AUDIO_PERMISSION_CODE = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class LayoutVoiceControlActivity extends AppCompatActivity implements Rec
             @Override
             public void onClick(View v) {
                 startSpeechRecognition();
+
             }
         });
 

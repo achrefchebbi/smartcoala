@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartCoala1</string>
+    <string name="app_name">SmartCoala</string>
     <string name="time">select_open_date_time</string>
     <string name="home">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
